@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCraft | Content Writer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-orange: #ff6b35;
+            --secondary-orange: #ff9e35;
+            --dark-orange: #d94e24;
+            --light-orange: #ffd3b4;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-orange);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-orange);
+            transform: translateY(-2px);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+        
+        .nav-link:hover {
+            color: var(--dark-orange) !important;
+        }
+        
+        .active-link {
+            border-bottom: 2px solid var(--primary-orange);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="flex items-center space-x-2">
+                        <span class="text-3xl font-bold text-orange-600">WordCraft</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-orange-600 px-3 py-2 font-medium">Home</a>
+                    <a href="#portfolio" class="nav-link text-gray-700 hover:text-orange-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="#blog" class="nav-link text-gray-700 hover:text-orange-600 px-3 py-2 font-medium">Blog</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-orange-600 px-3 py-2 font-medium">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-orange-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-orange-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="flex flex-col space-y-2 px-4 pb-4">
+                <a href="#home" class="nav-link text-gray-700 hover:text-orange-600 py-2 font-medium border-b border-gray-100">Home</a>
+                <a href="#portfolio" class="nav-link text-gray-700 hover:text-orange-600 py-2 font-medium border-b border-gray-100">Portfolio</a>
+                <a href="#blog" class="nav-link text-gray-700 hover:text-orange-600 py-2 font-medium border-b border-gray-100">Blog</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-orange-600 py-2 font-medium border-b border-gray-100">About</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-orange-600 py-2 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-20 gradient-bg text-white fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Crafting Words That Captivate</h1>
+                    <p class="text-xl mb-8 leading-relaxed">I transform ideas into compelling narratives that engage, inform, and inspire your audience.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                            Hire Me <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#portfolio" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                            View Work <i class="fas fa-eye ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-orange-300 rounded-full opacity-20 transform -rotate-12"></div>
+                        <div class="absolute inset-4 bg-orange-400 rounded-full opacity-30 transform rotate-12"></div>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                             alt="Writer portrait" 
+                             class="absolute inset-8 w-full h-full object-cover rounded-full border-4 border-white shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">My Writing Services</h2>
+                <div class="h-1 w-20 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-all">
+                    <div class="text-orange-500 mb-4 text-4xl">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Blog Content</h3>
+                    <p class="text-gray-600">Engaging blog posts that attract readers and boost your SEO rankings with carefully crafted, keyword-rich content.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-all">
+                    <div class="text-orange-500 mb-4 text-4xl">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Marketing Copy</h3>
+                    <p class="text-gray-600">Persuasive copy that converts visitors into customers, with compelling calls-to-action that drive results.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-all">
+                    <div class="text-orange-500 mb-4 text-4xl">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">E-Books & Whitepapers</h3>
+                    <p class="text-gray-600">In-depth long-form content that establishes your authority and provides real value to your audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Writing Samples</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Here's a selection of my recent work across various niches and industries.</p>
+                <div class="h-1 w-20 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-file-alt text-6xl text-orange-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sustainable Fashion Guide</h3>
+                        <p class="text-gray-600 mb-4">An comprehensive guide to eco-friendly fashion choices for conscious consumers.</p>
+                        <a href="#" class="text-orange-600 font-semibold hover:underline inline-flex items-center">
+                            Read Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-file-alt text-6xl text-orange-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tech Startup Blog Series</h3>
+                        <p class="text-gray-600 mb-4">A 12-part blog series on building and scaling a successful SaaS business.</p>
+                        <a href="#" class="text-orange-600 font-semibold hover:underline inline-flex items-center">
+                            Read Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <i class="fas fa-file-alt text-6xl text-orange-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Health & Wellness E-Book</h3>
+                        <p class="text-gray-600 mb-4">A 50-page guide on holistic approaches to mental and physical wellbeing.</p>
+                        <a href="#" class="text-orange-600 font-semibold hover:underline inline-flex items-center">
+                            Read Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                    View Full Portfolio <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">From My Blog</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Thoughts on writing, content strategy, and the creative process.</p>
+                <div class="h-1 w-20 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card bg-gray-50 rounded-lg overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044c990adf65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Writing tools" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-1"></i> June 15, 2023</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">The Art of Crafting Compelling Headlines</h3>
+                        <p class="text-gray-600 mb-4">Learn the psychology behind click-worthy headlines and how to write your own attention-grabbing titles.</p>
+                        <a href="#" class="text-orange-600 font-semibold hover:underline inline-flex items-center">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card bg-gray-50 rounded-lg overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="Writing notes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-1"></i> May 28, 2023</span>
+                            <span><i class="far fa-clock mr-1"></i> 8 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Finding Your Unique Writing Voice</h3>
+                        <p class="text-gray-600 mb-4">Strategies for developing an authentic writing style that resonates with your target audience.</p>
+                        <a href="#" class="text-orange-600 font-semibold hover:underline inline-flex items-center">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card bg-gray-50 rounded-lg overflow-hidden transition-all duration-300">
+                    <div class="h-48 bg-orange-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                             alt="SEO concept" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-1"></i> April 10, 2023</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Balancing SEO and Readability</h3>
+                        <p class="text-gray-600 mb-4">How to write content that both ranks well in search engines and provides genuine value to readers.</p>
+                        <a href="#" class="text-orange-600 font-semibold hover:underline inline-flex items-center">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                    View All Articles <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative w-64 h-64">
+                        <div class="absolute inset-0 bg-orange-200 rounded-full opacity-30 transform -rotate-12"></div>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                             alt="Writer portrait" 
+                             class="absolute inset-0 w-full h-full object-cover rounded-full border-4 border-white shadow-lg">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm Jane Doe, a professional content writer with over 8 years of experience crafting compelling narratives 
+                        for brands across various industries. My passion lies in transforming complex ideas into engaging, accessible 
+                        content that resonates with target audiences.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        With a background in journalism and digital marketing, I bring a unique blend of storytelling expertise 
+                        and conversion-focused writing to every project. Whether it's blog posts, web copy, or long-form content, 
+                        I strive to deliver words that not only inform but inspire action.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="bg-orange-100 text-orange-800 px-4 py-1 rounded-full text-sm font-medium">SEO Writing</span>
+                        <span class="bg-orange-100 text-orange-800 px-4 py-1 rounded-full text-sm font-medium">Content Strategy</span>
+                        <span class="bg-orange-100 text-orange-800 px-4 py-1 rounded-full text-sm font-medium">Copywriting</span>
+                        <span class="bg-orange-100 text-orange-800 px-4 py-1 rounded-full text-sm font-medium">Editing</span>
+                    </div>
+                    <a href="#" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+                        Download CV <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Clients Say</h2>
+                <div class="h-1 w-20 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg relative">
+                    <div class="absolute top-0 left-0 mt-4 ml-4 text-orange-500 text-3xl">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Working with Jane transformed our content strategy. Her ability to capture our brand voice while improving SEO performance was remarkable. Our blog traffic increased by 220% within six months."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                            <p class="text-sm text-gray-500">Marketing Director, TechStart Inc</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg relative">
+                    <div class="absolute top-0 left-0 mt-4 ml-4 text-orange-500 text-3xl">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The ebook Jane wrote for us exceeded all expectations. She conducted thorough research and presented complex financial concepts in an engaging, accessible way. We've had countless compliments from our clients."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-500">CEO, WealthPath Advisory</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg relative">
+                    <div class="absolute top-0 left-0 mt-4 ml-4 text-orange-500 text-3xl">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Jane's blog series for our sustainable fashion brand was a game-changer. She perfectly balanced educational content with our brand's values, resulting in higher engagement and conversions than we've ever seen."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Emma Rodriguez</h4>
+                            <p class="text-sm text-gray-500">Founder, GreenThread Apparel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
+                    <p class="text-xl mb-6 leading-relaxed">Have a project in mind or want to discuss potential collaboration? I'd love to hear from you.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-orange-200 mr-4 text-xl mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Email</h4>
+                                <p class="text-orange-100">hello@wordcraft.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-orange-200 mr-4 text-xl mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Phone</h4>
+                                <p class="text-orange-100">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-orange-200 mr-4 text-xl mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Location</h4>
+                                <p class="text-orange-100">San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-orange-600 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-orange-600 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-orange-600 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white text-orange-600 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-colors">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <form class="bg-white rounded-lg shadow-lg p-6 text-gray-700">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Send Me a Message</h3>
+                        
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary text-white w-full py-3 rounded-lg font-semibold">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Subscribe to My Newsletter</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Get writing tips, content strategy insights, and updates delivered to your inbox.</p>
+            
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" id="newsletter-email" placeholder="Your email address" 
+                       class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500" required>
+                <button type="submit" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
+                    Subscribe
+                </button>
+            </form>
+            <p id="newsletter-message" class="mt-4 text-sm"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">WordCraft</h3>
+                    <p class="text-gray-400 max-w-xs">Crafting compelling content that engages audiences and drives results.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                            <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                            <li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog Writing</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Copy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">E-Books</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Newsletters</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Editing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 WordCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Newsletter form handling
+        document.getElementById('newsletter-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            const messageEl = document.getElementById('newsletter-message');
+            
+            try {
+                const response = await fetch('/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email }),
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    messageEl.textContent = 'Thank you for subscribing!';
+                    messageEl.className = 'mt-4 text-sm text-green-500';
+                    document.getElementById('newsletter-form').reset();
+                } else {
+                    messageEl.textContent = result.error || 'Subscription failed. Please try again.';
+                    messageEl.className = 'mt-4 text-sm text-red-500';
+                }
+            } catch (error) {
+                messageEl.textContent = 'Network error. Please try again later.';
+                messageEl.className = 'mt-4 text-sm text-red-500';
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    
+                    // Update active link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active-link');
+                    });
+                    this.classList.add('active-link');
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
